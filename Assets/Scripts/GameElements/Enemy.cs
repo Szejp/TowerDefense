@@ -1,15 +1,15 @@
-﻿namespace AFSInterview
-{
-    using System;
-    using UnityEngine;
-    using Random = UnityEngine.Random;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
+namespace AFSInterview.GameElements
+{
     public class Enemy : MonoBehaviour
     {
         [SerializeField] private float maxSpeed;
         [SerializeField] private float speedVariance;
 
-        public event Action<Enemy> OnEnemyDied;
+        public static event Action<Enemy> OnEnemyDied;
 
         private Vector2 boundsMin;
         private Vector2 boundsMax;
