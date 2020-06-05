@@ -9,12 +9,22 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="GameElements" t="Include">
-            <e p="Bullet.cs" t="Include" />
+            <e p="Bullets" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="GravityBullet.cs" t="Include" />
+              <e p="HomingBullet.cs" t="Include" />
+            </e>
             <e p="Enemy.cs" t="Include" />
             <e p="SimpleTower.cs" t="Include" />
           </e>
           <e p="Helpers" t="Include">
-            <e p="LayerNames.cs" t="Include" />
+            <e p="Layers.cs" t="Include" />
+            <e p="ObjectPool.cs" t="Include" />
+            <e p="TowerType.cs" t="Include" />
+          </e>
+          <e p="Shooting" t="Include">
+            <e p="ShootingSystem.cs" t="Include" />
+            <e p="ShootingSystemConfig.cs" t="Include" />
           </e>
           <e p="system" t="Include">
             <e p="Builder.cs" t="Include" />

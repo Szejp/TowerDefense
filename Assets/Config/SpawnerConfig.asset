@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab6d73282e84504bd14257b2e01f419, type: 3}
   m_Name: SpawnerConfig
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7577324009426626682, guid: 530182aaaf989f444833d42faa8b16b7,
+  enemyPrefab: {fileID: -5989250712149674095, guid: 530182aaaf989f444833d42faa8b16b7,
     type: 3}
-  towerPrefab: {fileID: 8481531145051783542, guid: 25d0f396843308e46a1c35b076505faf,
+  towerPrefab: {fileID: -20385095561259241, guid: 25d0f396843308e46a1c35b076505faf,
+    type: 3}
+  otherTowerPrefab: {fileID: -20385095561259241, guid: 9fea4560a8c98dd4d83a8b9e7f1223c5,
     type: 3}
