@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
+using AFSInterview.Shooting;
 using UnityEngine;
 
 namespace AFSInterview.GameElements
 {
     public class SimpleTower : MonoBehaviour
     {
+        [SerializeField] private ShootingSystem shootingSystem;
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private Transform bulletSpawnPoint;
-        [SerializeField] private float firingRate;
         [SerializeField] private float firingRange;
 
         private float fireTimer;
@@ -15,10 +16,12 @@ namespace AFSInterview.GameElements
 
         private IReadOnlyList<Enemy> enemies;
 
+        public ShootingSystem ShootingSystem => shootingSystem;
+
         public void Initialize(IReadOnlyList<Enemy> enemies)
         {
             this.enemies = enemies;
-            fireTimer = firingRate;
+            fireTimer = ShootingSystem.FireRate;
         }
 
         private void Update()
@@ -27,19 +30,17 @@ namespace AFSInterview.GameElements
             if (targetEnemy != null)
             {
                 var lookRotation = Quaternion.LookRotation(targetEnemy.transform.position - transform.position);
-                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, lookRotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, lookRotation.eulerAngles.y,
+                    transform.rotation.eulerAngles.z);
             }
 
             fireTimer -= Time.deltaTime;
             if (fireTimer <= 0f)
             {
                 if (targetEnemy != null)
-                {
-                    var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity).GetComponent<Bullet>();
-                    bullet.Initialize(targetEnemy.gameObject);
-                }
+                    ShootingSystem.Fire(targetEnemy.gameObject.transform);
 
-                fireTimer = firingRate;
+                fireTimer = ShootingSystem.FireRate;
             }
         }
 

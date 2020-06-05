@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a63f19b0eef85944f90648a795e0958b, type: 2}
+  - {fileID: 2100000, guid: cde891d4ce9e737499492a79309c31f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: -20385095561259241}
   - component: {fileID: -8612301776353593247}
   m_Layer: 10
-  m_Name: SimpleTower
+  m_Name: OtherTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,7 +172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a63f19b0eef85944f90648a795e0958b, type: 2}
+  - {fileID: 2100000, guid: cde891d4ce9e737499492a79309c31f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -236,6 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a808a0643f4b74a37a5db224fb66dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: eadd80e4dba55734eb89fc424a5ece1a, type: 2}
+  config: {fileID: 11400000, guid: 17428f3b7c636284fb0e343db6c1aa2f, type: 2}
   shootingAnchor: {fileID: 5809919413682724424}
   spawner: {fileID: 0}
