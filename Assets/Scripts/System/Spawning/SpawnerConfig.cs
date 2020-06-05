@@ -1,3 +1,4 @@
+using AFSInterview.GameElements;
 using UnityEngine;
 
 namespace AFSInterview.System.Spawning
@@ -6,7 +7,8 @@ namespace AFSInterview.System.Spawning
     public class SpawnerConfig : ScriptableObject
     {
         [Header("Prefabs")] 
-        public GameObject enemyPrefab;
-        public GameObject towerPrefab;
+        public Enemy enemyPrefab;
+        public SimpleTower towerPrefab;
+        public SimpleTower otherTowerPrefab;
     }
 }
